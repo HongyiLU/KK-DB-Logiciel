@@ -8,24 +8,24 @@ namespace KK数据库管理软件.Class
     class Produit
     {
 
-        public string VendorSKU;
-        public List<string> Color;
-        public List<string> VendorSize;
-        public string Collection;
-        public string Designation;
-        public string Marque;
-        public string Composition;
-        public string Origine;
-        public string PrixAchat;
-        public string Cost;
-        public string MSRP;
-        public string Longeur;
-        public string inseam;
-        public string Poid;
-        public string Adresse;
-        public string Doublure;
-        public string FabCons;
-        public string DateAj;
+        public string VendorSKU { get; set; }
+        public List<string> Color { get; set; }
+        public List<string> VendorSize { get; set; }
+        public string Collection { get; set; }
+        public string Designation { get; set; }
+        public string Marque { get; set; }
+        public string Composition { get; set; }
+        public string Origine { get; set; }
+        public string PrixAchat { get; set; }
+        public string Cost { get; set; }
+        public string MSRP { get; set; }
+        public string Longeur { get; set; }
+        public string inseam { get; set; }
+        public string Poid { get; set; }
+        public string Adresse { get; set; }
+        public string Doublure { get; set; }
+        public string FabCons { get; set; }
+        public string DateAj { get; set; }
 
         public Produit()
         {
@@ -53,12 +53,14 @@ namespace KK数据库管理软件.Class
         {
             try
             {
-
+                
+                
+                bool result = false;
                 for (int i = 0; i < Color.Count; i++)
                 {
                     string cmd = "INSERT INTO PRODUIT VALUES(?,?,?,?,?,?,?,?,?,?)";
                     OleDbCommand sqlcmd = new OleDbCommand(cmd, MainForm.DBKeepkool);
-                        sqlcmd.Parameters.AddWithValue("?", this.VendorSKU + "-" + this.Color[i]);
+                    sqlcmd.Parameters.AddWithValue("?", this.VendorSKU + "-" + this.Color[i]);
                     sqlcmd.Parameters.AddWithValue("?", this.Collection);
                     sqlcmd.Parameters.AddWithValue("?", this.Designation);
                     sqlcmd.Parameters.AddWithValue("?", this.Origine);
@@ -68,17 +70,29 @@ namespace KK数据库管理软件.Class
                     sqlcmd.Parameters.AddWithValue("?", this.DateAj);
                     sqlcmd.Parameters.AddWithValue("?", this.PrixAchat);
                     sqlcmd.Parameters.AddWithValue("?", this.Marque);
-                    sqlcmd.ExecuteNonQuery();
+                    if (sqlcmd.ExecuteNonQuery() > 0)
+                    {
+                        result = true;
+                    }
                     for (int j = 0; j < VendorSize.Count; j++)
                     {
                         string cmd2 = "INSERT INTO TAILLE_PRODUIT VALUES(?,?)";
+
                         OleDbCommand sqlcmd2 = new OleDbCommand(cmd2, MainForm.DBKeepkool);
                         sqlcmd2.Parameters.AddWithValue("?", this.VendorSKU + "-" + this.Color[i]);  
                         sqlcmd2.Parameters.AddWithValue("?", this.VendorSize[j]);
-                        sqlcmd2.ExecuteNonQuery();
+                        if (sqlcmd2.ExecuteNonQuery() > 0)
+                        {
+                            result = true;
+                        }
+                        else
+                        {
+                            result = false;
+                        }
                     }
+
                 }
-                return true;
+                return result;
             }
             catch (System.Exception ex)
             {
@@ -154,18 +168,38 @@ namespace KK数据库管理软件.Class
             }
         }
 
-        public void Delete()
+        public bool Delete()
         {
+            bool result = false;
             try
             {
-                string cmd = "DELETE FROM PRODUIT WHERE ID_PRODUIT LIKE '" + this.VendorSKU + "%'";
+                string cmd = "DELETE FROM PRODUIT WHERE ID_PRODUIT =?";
                 OleDbCommand sqlcmd = new OleDbCommand(cmd, MainForm.DBKeepkool);
-                //sqlcmd.Parameters.AddWithValue("?", this.VendorSKU);
-                sqlcmd.ExecuteNonQuery();
+                sqlcmd.Parameters.AddWithValue("?", this.VendorSKU);
+                if (sqlcmd.ExecuteNonQuery() < 1)
+                {
+
+                    for(int i = 0; i < this.Color.Count; i++)
+                    {
+                        OleDbCommand sqlcmd1 = new OleDbCommand(cmd, MainForm.DBKeepkool);
+                        string Ref_Pro = this.VendorSKU + "-" + this.Color[i];
+                        sqlcmd1.Parameters.AddWithValue("?", Ref_Pro);
+                        if (sqlcmd1.ExecuteNonQuery() > 0)
+                        {
+                            result = true;
+                        }
+                    }
+                }
+                else
+                {
+                    result = true;
+                }
+                return result;
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                return false;
             }
         }
     }

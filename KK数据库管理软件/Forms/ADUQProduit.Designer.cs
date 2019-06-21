@@ -66,7 +66,6 @@
             this.UpdateProduit = new System.Windows.Forms.Button();
             this.DeleteProduit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.VendorSKU = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.CollePro = new System.Windows.Forms.TextBox();
@@ -439,22 +438,14 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.VendorSKU});
             this.dataGridView1.Location = new System.Drawing.Point(853, 132);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.Size = new System.Drawing.Size(288, 674);
             this.dataGridView1.TabIndex = 72;
-            // 
-            // VendorSKU
-            // 
-            this.VendorSKU.HeaderText = "VendorSKU";
-            this.VendorSKU.MinimumWidth = 6;
-            this.VendorSKU.Name = "VendorSKU";
             // 
             // label15
             // 
@@ -694,7 +685,6 @@
         private KEEPKOOLDataSetTableAdapters.TAILLETableAdapter tAILLETableAdapter;
         private System.Windows.Forms.BindingSource cOLORBindingSource;
         private KEEPKOOLDataSetTableAdapters.COLORTableAdapter cOLORTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VendorSKU;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox DoubProduit;

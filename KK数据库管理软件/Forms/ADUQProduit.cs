@@ -21,8 +21,8 @@ namespace KK数据库管理软件.Forms
 
             try
             {
-                ListProduits = new List<Produit>();
-                proUtilClass = new ProUtilClass();
+                ListProduits = new List<Produit>();//初始化暂存列表
+                proUtilClass = new ProUtilClass();//初始化工具类对象
                 // TODO: 这行代码将数据加载到表“kEEPKOOLDataSet.COLOR”中。您可以根据需要移动或删除它。
                 this.cOLORTableAdapter.Fill(this.kEEPKOOLDataSet.COLOR);
                 // TODO: 这行代码将数据加载到表“kEEPKOOLDataSet.TAILLE”中。您可以根据需要移动或删除它。
@@ -41,7 +41,7 @@ namespace KK数据库管理软件.Forms
 
         private void AddProduit_Click(object sender, EventArgs e)
         {
-            Produit Pro = new Produit();
+            Produit Pro = new Produit();//初始化Produit对象
             Pro.VendorSKU = SKUProduit.Text;
             Pro.Collection = CollePro.Text;
             Pro.Designation = ComboBox1.Text;
@@ -70,13 +70,19 @@ namespace KK数据库管理软件.Forms
 
             try
             {
-                ListProduits.Add(Pro);
-                if (Pro.Add() == true)
+                
+                if (Pro.Add() == true)//将此对象添加进入数据库
                 {
-                    dataGridView1.Rows.Add();
-                    dataGridView1.Rows[dataGridView1.Rows.Count - 2].Cells[0].Value = Pro.VendorSKU;
-                    SKUProduit.AutoCompleteCustomSource = proUtilClass.SKUSuggestList(MainForm.DBKeepkool);
+                    ListProduits.Add(Pro);//将对象存入暂存列表
+                    //dataGridView1.Rows.Add();
+                    //dataGridView1.Rows[dataGridView1.Rows.Count - 2].Cells[0].Value = Pro.VendorSKU;
+                    SKUProduit.AutoCompleteCustomSource = proUtilClass.SKUSuggestList(MainForm.DBKeepkool);//重新加载推荐列表
                     MessageBox.Show("Product added");
+                    //重新加载DataGridView
+                    dataGridView1.DataSource = null;
+                    dataGridView1.Rows.Clear();
+                    dataGridView1.DataSource = ListProduits;
+                    //Clear all checkedListBox
                     for (int i = 0; i < checkedListBoxColor.Items.Count; i++)
                     {
                         checkedListBoxColor.SetItemChecked(i, false);
@@ -85,6 +91,7 @@ namespace KK数据库管理软件.Forms
                     {
                         checkedListBoxSize.SetItemChecked(i, false);
                     }
+                    //清0其余选项
                     SKUProduit.Clear();
                     PrixAchatProduit.Text = "0";
                     CostProduit.Text = "0";
@@ -95,6 +102,10 @@ namespace KK数据库管理软件.Forms
                     DoubProduit.Text = "";
                     ShowColorChosen.Clear();
                     ShowSizeChosen.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Operation failed","Error!",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
             catch (System.Exception ex)
@@ -107,7 +118,7 @@ namespace KK数据库管理软件.Forms
 
         private void UpdateProduit_Click(object sender, EventArgs e)
         {
-            Produit Pro = new Produit();
+            Produit Pro = new Produit();//初始化Produit对象
             Pro.VendorSKU = SKUProduit.Text;
             Pro.Collection = CollePro.Text;
             Pro.Designation = ComboBox1.Text;
@@ -133,7 +144,16 @@ namespace KK数据库管理软件.Forms
 
             try
             {
-                Pro.Update();
+                Pro.Update();//更新该对象在数据库中的对应值
+                //更新该对象在暂存列表中的对应值
+                for(int i = 0; i < ListProduits.Count; i++)
+                {
+                    if(ListProduits[i].VendorSKU == Pro.VendorSKU)
+                    {
+                        ListProduits.RemoveAt(i);
+                        ListProduits.Insert(i, Pro);
+                    }
+                }
                 MessageBox.Show("Product Updated!");
             }
             catch (System.Exception ex)
@@ -144,26 +164,76 @@ namespace KK数据库管理软件.Forms
 
         private void DeleteProduit_Click(object sender, EventArgs e)
         {
-            Produit Pro = new Produit();
-            Pro.VendorSKU = SKUProduit.Text;
-            for (int i = 0; i < checkedListBoxColor.CheckedItems.Count; i++)
+            if (SKUProduit.TextLength > 6)
             {
-                Pro.Color.Add(checkedListBoxColor.GetItemText(checkedListBoxColor.CheckedItems[i]));
-            }
+                //新建Produit对象
+                Produit Pro = new Produit();
+                Pro.VendorSKU = SKUProduit.Text;
+                for (int i = 0; i < checkedListBoxColor.CheckedItems.Count; i++)
+                {
+                    Pro.Color.Add(checkedListBoxColor.GetItemText(checkedListBoxColor.CheckedItems[i]));
+                }
 
-            try
-            {
-                Pro.Delete();
-                MessageBox.Show("Product deleted!");
-                this.Controls.Clear();
-                InitializeComponent();
-                SKUProduit.AutoCompleteCustomSource = proUtilClass.SKUSuggestList(MainForm.DBKeepkool);
-            }
+                try
+                {
+                    
+                    //删除此对象在数据库中的对应值
+                    if (Pro.Delete())
+                    {
+                        //删除此对象在暂存列表中对应的值
+                        for (int i = 0; i < ListProduits.Count; i++)
+                        {
+                            if (ListProduits[i].VendorSKU == Pro.VendorSKU)
+                            {
+                                ListProduits.RemoveAt(i);
+                            }
+                            else
+                            {
+                                for(int j = 0; j < ListProduits[i].Color.Count; j++)
+                                {
+                                    if(Pro.VendorSKU == ListProduits[i].VendorSKU + "-" + ListProduits[i].Color[j])
+                                    {
+                                        ListProduits[i].Color.RemoveAt(j);
+                                    }
+                                }
+                            }
+                        }
+                        MessageBox.Show("Product deleted!");
+                        //Clear all checkedListBox  
+                        for (int i = 0; i < checkedListBoxColor.Items.Count; i++)
+                        {
+                            checkedListBoxColor.SetItemChecked(i, false);
+                        }
+                        for (int i = 0; i < checkedListBoxSize.Items.Count; i++)
+                        {
+                            checkedListBoxSize.SetItemChecked(i, false);
+                        }
+                        //Clear all textbox
+                        foreach (Control c in this.Controls)
+                        {
+                            if (c is TextBox)
+                            {
+                                ((TextBox)(c)).Text = "";
+                            }
+                        }
+                        SKUProduit.AutoCompleteCustomSource = proUtilClass.SKUSuggestList(MainForm.DBKeepkool);
+                        //重载DataGridView
+                        dataGridView1.DataSource = null;
+                        dataGridView1.Rows.Clear();
+                        dataGridView1.DataSource = ListProduits;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Operation failed", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }     
+                }
 
-            catch (System.Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
+            
 
         }
 
@@ -230,9 +300,18 @@ namespace KK数据库管理软件.Forms
             }
         }
 
-        private void ADUQProduit_OnClosing(object sender, EventArgs e)
+        private void ADUQProduit_OnClosing(object sender, FormClosingEventArgs e)
         {
-            proUtilClass.KillThreadExcel();
+            if(MessageBox.Show("Are you sure to close this windows? All data not saved will be lost!", "Warning!", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                e.Cancel = false;
+                proUtilClass.KillThreadExcel();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+            
         }
 
         private void PrixAchatProduit_KeyPress(object sender, KeyPressEventArgs e)

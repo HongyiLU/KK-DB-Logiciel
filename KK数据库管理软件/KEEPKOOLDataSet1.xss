@@ -12,17 +12,17 @@
     <Shape ID="DesignTable:DETAIL_VENTE" ZOrder="24" X="1084" Y="70" Height="204" Width="286" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
     <Shape ID="DesignTable:FAC_ACHAT" ZOrder="23" X="1440" Y="70" Height="158" Width="266" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
     <Shape ID="DesignTable:FAC_VENTE" ZOrder="22" X="1776" Y="70" Height="135" Width="261" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
-    <Shape ID="DesignTable:FACACHAT_DETAIL" ZOrder="21" X="2107" Y="70" Height="181" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
-    <Shape ID="DesignTable:FACVENTE_DETAIL" ZOrder="20" X="2477" Y="70" Height="181" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
-    <Shape ID="DesignTable:FOURNISSEUR" ZOrder="19" X="2847" Y="70" Height="227" Width="285" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
-    <Shape ID="DesignTable:PRODUIT" ZOrder="18" X="3202" Y="70" Height="342" Width="245" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
-    <Shape ID="DesignTable:TAILLE" ZOrder="17" X="3517" Y="70" Height="112" Width="224" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
-    <Shape ID="DesignTable:TAILLE_PRODUIT" ZOrder="16" X="3811" Y="70" Height="135" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
-    <Shape ID="DesignTable:VENTE" ZOrder="15" X="4181" Y="70" Height="135" Width="223" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
-    <Shape ID="DesignTable:COLOR" ZOrder="1" X="4474" Y="70" Height="135" Width="227" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
+    <Shape ID="DesignTable:FOURNISSEUR" ZOrder="21" X="2847" Y="70" Height="227" Width="285" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
+    <Shape ID="DesignTable:PRODUIT" ZOrder="20" X="3202" Y="70" Height="342" Width="245" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="260" />
+    <Shape ID="DesignTable:TAILLE" ZOrder="19" X="3517" Y="70" Height="112" Width="224" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="54" />
+    <Shape ID="DesignTable:TAILLE_PRODUIT" ZOrder="18" X="3811" Y="70" Height="135" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
+    <Shape ID="DesignTable:VENTE" ZOrder="17" X="4181" Y="70" Height="135" Width="223" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
+    <Shape ID="DesignTable:COLOR" ZOrder="8" X="4474" Y="70" Height="135" Width="227" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="76" />
+    <Shape ID="DesignTable:FACACHAT_DETAIL" ZOrder="7" X="4771" Y="70" Height="204" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="145" />
+    <Shape ID="DesignTable:FACVENTE_DETAIL" ZOrder="6" X="5141" Y="70" Height="181" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FOURNISSEURACHAT" ZOrder="14" LineWidth="11">
+    <Connector ID="DesignRelation:FOURNISSEURACHAT" ZOrder="16" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>2847</X>
@@ -34,7 +34,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:ACHATDETAIL_ACHAT" ZOrder="13" LineWidth="11">
+    <Connector ID="DesignRelation:ACHATDETAIL_ACHAT" ZOrder="15" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>298</X>
@@ -46,7 +46,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:PRODUITDETAIL_ACHAT" ZOrder="12" LineWidth="11">
+    <Connector ID="DesignRelation:PRODUITDETAIL_ACHAT" ZOrder="14" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>3202</X>
@@ -58,7 +58,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:PRODUITDETAIL_VENTE" ZOrder="11" LineWidth="11">
+    <Connector ID="DesignRelation:PRODUITDETAIL_VENTE" ZOrder="13" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>3202</X>
@@ -70,7 +70,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:VENTEDETAIL_VENTE" ZOrder="10" LineWidth="11">
+    <Connector ID="DesignRelation:VENTEDETAIL_VENTE" ZOrder="12" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>4181</X>
@@ -82,67 +82,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:DESIGNATIONFACACHAT_DETAIL" ZOrder="9" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>653</X>
-          <Y>126</Y>
-        </Point>
-        <Point>
-          <X>2107</X>
-          <Y>126</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:FAC_ACHATFAC_DETAIL" ZOrder="8" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>1706</X>
-          <Y>118</Y>
-        </Point>
-        <Point>
-          <X>2107</X>
-          <Y>118</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:PRODUITFAC_DETAIL" ZOrder="7" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>3202</X>
-          <Y>110</Y>
-        </Point>
-        <Point>
-          <X>2407</X>
-          <Y>110</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:FAC_VENTEFACVENTE_DETAIL" ZOrder="6" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>2037</X>
-          <Y>102</Y>
-        </Point>
-        <Point>
-          <X>2477</X>
-          <Y>102</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:PRODUITFACVENTE_DETAIL" ZOrder="5" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>3202</X>
-          <Y>94</Y>
-        </Point>
-        <Point>
-          <X>2777</X>
-          <Y>94</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:DESIGNATIONPRODUIT" ZOrder="4" LineWidth="11">
+    <Connector ID="DesignRelation:DESIGNATIONPRODUIT" ZOrder="11" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>653</X>
@@ -154,7 +94,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:PRODUITTAILLE_PRODUIT" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:PRODUITTAILLE_PRODUIT" ZOrder="10" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>3447</X>
@@ -166,7 +106,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:TAILLETAILLE_PRODUIT" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:TAILLETAILLE_PRODUIT" ZOrder="9" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>3733</X>
@@ -183,6 +123,66 @@
         <Point>
           <X>3819</X>
           <Y>70</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:DESIGNATIONFACACHAT_DETAIL" ZOrder="5" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>653</X>
+          <Y>128</Y>
+        </Point>
+        <Point>
+          <X>4771</X>
+          <Y>128</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FAC_ACHATFAC_DETAIL" ZOrder="4" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>1706</X>
+          <Y>120</Y>
+        </Point>
+        <Point>
+          <X>4771</X>
+          <Y>120</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:PRODUITFAC_DETAIL" ZOrder="3" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>3447</X>
+          <Y>112</Y>
+        </Point>
+        <Point>
+          <X>4771</X>
+          <Y>112</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:FAC_VENTEFACVENTE_DETAIL" ZOrder="2" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>2037</X>
+          <Y>104</Y>
+        </Point>
+        <Point>
+          <X>5141</X>
+          <Y>104</Y>
+        </Point>
+      </RoutePoints>
+    </Connector>
+    <Connector ID="DesignRelation:PRODUITFACVENTE_DETAIL" ZOrder="1" LineWidth="11">
+      <RoutePoints>
+        <Point>
+          <X>3447</X>
+          <Y>96</Y>
+        </Point>
+        <Point>
+          <X>5141</X>
+          <Y>96</Y>
         </Point>
       </RoutePoints>
     </Connector>

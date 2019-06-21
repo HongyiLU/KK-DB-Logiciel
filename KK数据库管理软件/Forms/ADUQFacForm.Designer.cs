@@ -28,11 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ADUQFacForm));
-            this.ComboBox1 = new System.Windows.Forms.ComboBox();
-            this.dESIGNATIONBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kEEPKOOLDataSet = new KK数据库管理软件.KEEPKOOLDataSet();
             this.Label8 = new System.Windows.Forms.Label();
             this.DateFac = new System.Windows.Forms.DateTimePicker();
             this.DeleteFac = new System.Windows.Forms.Button();
@@ -43,42 +39,15 @@
             this.Label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.DETAILFAC = new System.Windows.Forms.DataGridView();
-            this.QteFacProd = new System.Windows.Forms.TextBox();
-            this.PrixFacProd = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dESIGNATIONTableAdapter = new KK数据库管理软件.KEEPKOOLDataSetTableAdapters.DESIGNATIONTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dESIGNATIONBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kEEPKOOLDataSet)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_FAC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESIGNATION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QUANTITE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRIX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DETAILFAC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ComboBox1
-            // 
-            this.ComboBox1.DataSource = this.dESIGNATIONBindingSource;
-            this.ComboBox1.DisplayMember = "DESIGNATION";
-            this.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBox1.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.ComboBox1.FormattingEnabled = true;
-            this.ComboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ComboBox1.Location = new System.Drawing.Point(59, 159);
-            this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(321, 33);
-            this.ComboBox1.TabIndex = 46;
-            this.ComboBox1.ValueMember = "DESIGNATION";
-            // 
-            // dESIGNATIONBindingSource
-            // 
-            this.dESIGNATIONBindingSource.DataMember = "DESIGNATION";
-            this.dESIGNATIONBindingSource.DataSource = this.kEEPKOOLDataSet;
-            // 
-            // kEEPKOOLDataSet
-            // 
-            this.kEEPKOOLDataSet.DataSetName = "KEEPKOOLDataSet";
-            this.kEEPKOOLDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Label8
             // 
@@ -175,75 +144,59 @@
             // 
             this.DETAILFAC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DETAILFAC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DETAILFAC.Location = new System.Drawing.Point(59, 126);
+            this.DETAILFAC.Location = new System.Drawing.Point(59, 117);
             this.DETAILFAC.Name = "DETAILFAC";
             this.DETAILFAC.RowHeadersWidth = 51;
             this.DETAILFAC.RowTemplate.Height = 27;
-            this.DETAILFAC.Size = new System.Drawing.Size(1030, 634);
-            this.DETAILFAC.TabIndex = 48;
+            this.DETAILFAC.Size = new System.Drawing.Size(986, 650);
+            this.DETAILFAC.TabIndex = 124;
             // 
-            // QteFacProd
+            // dataGridView1
             // 
-            this.QteFacProd.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.QteFacProd.ForeColor = System.Drawing.Color.Black;
-            this.QteFacProd.Location = new System.Drawing.Point(403, 159);
-            this.QteFacProd.Name = "QteFacProd";
-            this.QteFacProd.Size = new System.Drawing.Size(278, 34);
-            this.QteFacProd.TabIndex = 89;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.ID_FAC,
+            this.DESIGNATION,
+            this.QUANTITE,
+            this.PRIX});
+            this.dataGridView1.Location = new System.Drawing.Point(59, 117);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(986, 650);
+            this.dataGridView1.TabIndex = 125;
             // 
-            // PrixFacProd
+            // ID
             // 
-            this.PrixFacProd.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.PrixFacProd.ForeColor = System.Drawing.Color.Black;
-            this.PrixFacProd.Location = new System.Drawing.Point(704, 159);
-            this.PrixFacProd.Name = "PrixFacProd";
-            this.PrixFacProd.Size = new System.Drawing.Size(278, 34);
-            this.PrixFacProd.TabIndex = 105;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
             // 
-            // linkLabel1
+            // ID_FAC
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(1005, 169);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(39, 15);
-            this.linkLabel1.TabIndex = 106;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Save";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.ID_FAC.HeaderText = "ID_FAC";
+            this.ID_FAC.MinimumWidth = 6;
+            this.ID_FAC.Name = "ID_FAC";
             // 
-            // label3
+            // DESIGNATION
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(153, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 23);
-            this.label3.TabIndex = 107;
-            this.label3.Text = "Désignation";
+            this.DESIGNATION.HeaderText = "DESIGNATION";
+            this.DESIGNATION.MinimumWidth = 6;
+            this.DESIGNATION.Name = "DESIGNATION";
             // 
-            // label4
+            // QUANTITE
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(473, 126);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 23);
-            this.label4.TabIndex = 108;
-            this.label4.Text = "Quantité";
+            this.QUANTITE.HeaderText = "QUANTITE";
+            this.QUANTITE.MinimumWidth = 6;
+            this.QUANTITE.Name = "QUANTITE";
             // 
-            // label5
+            // PRIX
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(774, 126);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 23);
-            this.label5.TabIndex = 109;
-            this.label5.Text = "Prix";
-            // 
-            // dESIGNATIONTableAdapter
-            // 
-            this.dESIGNATIONTableAdapter.ClearBeforeFill = true;
+            this.PRIX.HeaderText = "PRIX";
+            this.PRIX.MinimumWidth = 6;
+            this.PRIX.Name = "PRIX";
             // 
             // ADUQFacForm
             // 
@@ -251,7 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1143, 888);
             this.Controls.Add(this.DETAILFAC);
-            this.Controls.Add(this.ComboBox1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.DateFac);
             this.Controls.Add(this.DeleteFac);
@@ -261,27 +214,18 @@
             this.Controls.Add(this.REF_FACTURE);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.PrixFacProd);
-            this.Controls.Add(this.QteFacProd);
-            this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ADUQFacForm";
             this.Text = "ADUSFacForm";
             this.Load += new System.EventHandler(this.ADUSFacForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dESIGNATIONBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kEEPKOOLDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DETAILFAC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        internal System.Windows.Forms.ComboBox ComboBox1;
         internal System.Windows.Forms.Label Label8;
         internal System.Windows.Forms.DateTimePicker DateFac;
         internal System.Windows.Forms.Button DeleteFac;
@@ -292,14 +236,16 @@
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DETAILFAC;
-        private System.Windows.Forms.TextBox QteFacProd;
-        private System.Windows.Forms.TextBox PrixFacProd;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private KEEPKOOLDataSet kEEPKOOLDataSet;
-        private System.Windows.Forms.BindingSource dESIGNATIONBindingSource;
-        private KEEPKOOLDataSetTableAdapters.DESIGNATIONTableAdapter dESIGNATIONTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDFACDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dESIGNATIONDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qUANTITEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pRIXDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_FAC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESIGNATION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QUANTITE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRIX;
     }
 }

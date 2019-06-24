@@ -16,7 +16,7 @@ namespace KK数据库管理软件.Class
         public ProUtilClass()
         {
             excel = new Microsoft.Office.Interop.Excel.Application();
-            workbook = excel.Workbooks.Open(System.IO.Directory.GetCurrentDirectory() + @"\Models\模板 Offer - Prix d'achat.xlsm");
+            workbook = excel.Workbooks.Open(System.IO.Directory.GetCurrentDirectory() + @"\Models\Template-Offer - Prix d'achat.xlsm");
             worksheet = workbook.Worksheets[1];
         }
 

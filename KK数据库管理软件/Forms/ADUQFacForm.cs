@@ -147,7 +147,7 @@ namespace KK数据库管理软件.Forms
                     MessageBox.Show("Facture has been Added!");
                 }
             }
-            catch (System.Exception ex)
+            catch 
             {
             }
             this.Controls.Clear();

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KK数据库管理软件", "KK数据库管理软件\KK数据库管理软件.csproj", "{4D51BD65-22FD-4D1F-80E2-C9A136F1CFF8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "KK_DMS", "KK_DMS\KK_DMS.vdproj", "{CA04E981-F2D6-4D47-A01B-0F33D9093981}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4D51BD65-22FD-4D1F-80E2-C9A136F1CFF8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4D51BD65-22FD-4D1F-80E2-C9A136F1CFF8}.Release|x86.ActiveCfg = Release|Any CPU
 		{4D51BD65-22FD-4D1F-80E2-C9A136F1CFF8}.Release|x86.Build.0 = Release|Any CPU
+		{CA04E981-F2D6-4D47-A01B-0F33D9093981}.Debug|Any CPU.ActiveCfg = Release
+		{CA04E981-F2D6-4D47-A01B-0F33D9093981}.Debug|x86.ActiveCfg = Debug
+		{CA04E981-F2D6-4D47-A01B-0F33D9093981}.Release|Any CPU.ActiveCfg = Release
+		{CA04E981-F2D6-4D47-A01B-0F33D9093981}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

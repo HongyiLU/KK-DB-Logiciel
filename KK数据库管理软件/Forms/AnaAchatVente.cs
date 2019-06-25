@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-namespace KK数据库管理软件
+namespace KK_DMS
 {
     public partial class AnaAchatVente : Form
     {

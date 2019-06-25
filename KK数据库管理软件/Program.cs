@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace KK数据库管理软件
+namespace KK_DMS
 {
     static class Program
     {

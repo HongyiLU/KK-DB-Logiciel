@@ -1,4 +1,4 @@
-﻿namespace KK数据库管理软件
+﻿namespace KK_DMS
 {
     partial class MainForm
     {

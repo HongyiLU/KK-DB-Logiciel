@@ -1,9 +1,9 @@
-﻿using KK数据库管理软件.Forms;
+﻿using KK_DMS.Forms;
 using System;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-namespace KK数据库管理软件
+namespace KK_DMS
 {
     public partial class MainForm : Form
     {
@@ -11,6 +11,7 @@ namespace KK数据库管理软件
         public MainForm()
         {
             InitializeComponent();
+            
         }
 
         private void 分割文件功能_Click(object sender, EventArgs e)
@@ -23,7 +24,7 @@ namespace KK数据库管理软件
         {
             try
             {
-                string DBpath = "Provider=microsoft.ace.oledb.12.0;Data Source="+ System.IO.Directory.GetCurrentDirectory() + @"\Data\KEEPKOOL.accdb";
+                string DBpath = "Provider=microsoft.ace.oledb.12.0;Data Source="+ System.IO.Directory.GetCurrentDirectory() + @"\KEEPKOOL.accdb";
                 DBKeepkool = new OleDbConnection(DBpath);
                 DBKeepkool.Open();
             }

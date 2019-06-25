@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace KK数据库管理软件 {
+namespace KK_DMS {
     
     
     /// <summary>
@@ -7208,7 +7208,7 @@ namespace KK数据库管理软件 {
         }
     }
 }
-namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
+namespace KK_DMS.KEEPKOOLDataSetTableAdapters {
     
     
     /// <summary>
@@ -7378,7 +7378,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7739,7 +7739,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8059,7 +8059,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8314,7 +8314,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8570,7 +8570,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8812,7 +8812,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9093,7 +9093,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9598,7 +9598,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9612,7 +9612,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT DISTINCT MARQUE\nFROM      PRODUIT";
+            this._commandCollection[1].CommandText = "SELECT DISTINCT MARQUE\r\nFROM      PRODUIT";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10189,7 +10189,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10487,7 +10487,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10723,7 +10723,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10977,7 +10977,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11339,7 +11339,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11738,7 +11738,7 @@ namespace KK数据库管理软件.KEEPKOOLDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::KK数据库管理软件.Properties.Settings.Default.KEEPKOOLConnectionString;
+            this._connection.ConnectionString = global::KK_DMS.Properties.Settings.Default.KEEPKOOLConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

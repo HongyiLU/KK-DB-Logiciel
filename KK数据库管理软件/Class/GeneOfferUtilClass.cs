@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KK数据库管理软件.Class
+namespace KK_DMS.Class
 {
 
     class GeneOfferUtilClass

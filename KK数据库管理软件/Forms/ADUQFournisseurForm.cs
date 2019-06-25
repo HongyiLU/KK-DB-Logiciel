@@ -2,7 +2,7 @@
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-namespace KK数据库管理软件.Forms
+namespace KK_DMS.Forms
 {
     public partial class ADUQFournisseurForm : Form
     {

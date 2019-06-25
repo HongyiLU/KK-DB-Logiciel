@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4D51BD65-22FD-4D1F-80E2-C9A136F1CFF8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>KK数据库管理软件</RootNamespace>
-    <AssemblyName>KK数据库管理软件</AssemblyName>
+    <RootNamespace>KK_DMS</RootNamespace>
+    <AssemblyName>KK_DMS</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -130,13 +130,11 @@
     </Compile>
     <Compile Include="KEEPKOOLDataSet1.cs">
       <DependentUpon>KEEPKOOLDataSet1.xsd</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="KEEPKOOLDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>KEEPKOOLDataSet1.xsd</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -169,23 +167,21 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="KEEPKOOLDataSet1.xsc">
       <DependentUpon>KEEPKOOLDataSet1.xsd</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <Content Include="Data\KEEPKOOL.accdb">
+    <Content Include="KEEPKOOL.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="KEEPKOOLDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>KEEPKOOLDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="KEEPKOOLDataSet1.xss">
       <DependentUpon>KEEPKOOLDataSet1.xsd</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="KK数据库管理软件_TemporaryKey.pfx" />
     <Content Include="bitbug_favicon.ico" />
@@ -259,21 +255,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="KEEPKOOL.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <PublishFile Include="KEEPKOOL.accdb">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>DataFile</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
+    <Folder Include="Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

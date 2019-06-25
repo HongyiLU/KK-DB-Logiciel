@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-namespace KK数据库管理软件.Class
+namespace KK_DMS.Class
 {
     class Produit
     {

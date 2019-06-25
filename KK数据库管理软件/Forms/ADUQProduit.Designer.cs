@@ -1,4 +1,4 @@
-﻿namespace KK数据库管理软件.Forms
+﻿namespace KK_DMS.Forms
 {
     partial class ADUQProduit
     {
@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ADUQProduit));
             this.checkedListBoxColor = new System.Windows.Forms.CheckedListBox();
             this.cOLORBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kEEPKOOLDataSet = new KK数据库管理软件.KEEPKOOLDataSet();
+            this.kEEPKOOLDataSet = new KK_DMS.KEEPKOOLDataSet();
             this.label1 = new System.Windows.Forms.Label();
             this.SKUProduit = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,9 +70,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.CollePro = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.dESIGNATIONTableAdapter = new KK数据库管理软件.KEEPKOOLDataSetTableAdapters.DESIGNATIONTableAdapter();
-            this.tAILLETableAdapter = new KK数据库管理软件.KEEPKOOLDataSetTableAdapters.TAILLETableAdapter();
-            this.cOLORTableAdapter = new KK数据库管理软件.KEEPKOOLDataSetTableAdapters.COLORTableAdapter();
+            this.dESIGNATIONTableAdapter = new KK_DMS.KEEPKOOLDataSetTableAdapters.DESIGNATIONTableAdapter();
+            this.tAILLETableAdapter = new KK_DMS.KEEPKOOLDataSetTableAdapters.TAILLETableAdapter();
+            this.cOLORTableAdapter = new KK_DMS.KEEPKOOLDataSetTableAdapters.COLORTableAdapter();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label17 = new System.Windows.Forms.Label();
             this.DoubProduit = new System.Windows.Forms.TextBox();

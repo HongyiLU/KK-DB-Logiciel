@@ -1,4 +1,4 @@
-﻿using KK数据库管理软件.Class;
+﻿using KK_DMS.Class;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace KK数据库管理软件.Forms
+namespace KK_DMS.Forms
 {
     public partial class GeneOfferForm : Form
     {

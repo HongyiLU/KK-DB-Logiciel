@@ -1,10 +1,10 @@
-﻿using KK数据库管理软件.Class;
+﻿using KK_DMS.Class;
 using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-namespace KK数据库管理软件.Forms
+namespace KK_DMS.Forms
 {
     public partial class ADUQProduit : Form
     {

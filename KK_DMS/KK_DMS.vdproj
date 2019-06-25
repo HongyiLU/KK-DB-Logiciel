@@ -68,6 +68,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
         "Release"
@@ -137,11 +145,6 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_B5EF5EE31C6980F52765BBF2C602B262"
-                    {
-                    "Name" = "8:System.Net.Http.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -237,15 +240,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:KK_DMS"
-        "ProductCode" = "8:{025C2EC9-7BDD-4728-A145-88CA35E0A819}"
-        "PackageCode" = "8:{48EBDBD1-4E3A-4455-A6B8-25E897E63E68}"
+        "ProductCode" = "8:{AB272D37-E7BC-4086-B22F-151A9B4FDC93}"
+        "PackageCode" = "8:{FAB94A7F-4FDD-4D44-9BBE-13DD90A4DB5B}"
         "UpgradeCode" = "8:{E993BB7C-FEB0-4F17-80D4-8B8CCC904E8E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.4"
+        "ProductVersion" = "8:1.0.9"
         "Manufacturer" = "8:HONGYI LU"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -815,7 +818,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_64426511AE0B4CF0A69F4597339C5355"
             {
-            "SourcePath" = "8:..\\KK数据库管理软件\\obj\\Debug\\KK数据库管理软件.exe"
+            "SourcePath" = "8:..\\KK数据库管理软件\\obj\\Debug\\KK_DMS.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_787641EEF74B454A9730785F9F060FB8"

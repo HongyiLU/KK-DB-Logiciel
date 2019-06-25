@@ -1,4 +1,4 @@
-﻿namespace KK数据库管理软件.Forms
+﻿namespace KK_DMS.Forms
 {
     partial class SepDocForm
     {

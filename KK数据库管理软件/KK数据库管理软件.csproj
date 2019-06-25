@@ -130,11 +130,13 @@
     </Compile>
     <Compile Include="KEEPKOOLDataSet1.cs">
       <DependentUpon>KEEPKOOLDataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="KEEPKOOLDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>KEEPKOOLDataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -170,6 +172,7 @@
     </Compile>
     <None Include="KEEPKOOLDataSet1.xsc">
       <DependentUpon>KEEPKOOLDataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Content Include="Data\KEEPKOOL.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -178,9 +181,11 @@
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>KEEPKOOLDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="KEEPKOOLDataSet1.xss">
       <DependentUpon>KEEPKOOLDataSet1.xsd</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="KK数据库管理软件_TemporaryKey.pfx" />
     <Content Include="bitbug_favicon.ico" />

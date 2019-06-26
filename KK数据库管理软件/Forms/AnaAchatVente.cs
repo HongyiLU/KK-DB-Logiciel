@@ -40,7 +40,7 @@ namespace KK_DMS
         {
             try
             {
-                if (dateTimePicker1.Value <= dateTimePicker2.Value)
+                if (DateBegin <= DateEnd)
                 {
                     //FacVente
                     string sql1 = "SELECT PRODUIT.DESIGNATION, Sum(FACVENTE_DETAIL.QUANTITE) AS QUANTITE, FACVENTE_DETAIL.PRIX AS PRIX_UNITAIRE FROM FAC_VENTE, FACVENTE_DETAIL INNER JOIN PRODUIT ON PRODUIT.ID_PRODUIT = FACVENTE_DETAIL.ID_PRODUIT WHERE((([FAC_VENTE].[DATE_FAC]) >=[?] And([FAC_VENTE].[DATE_FAC]) <=[?])) GROUP BY PRODUIT.DESIGNATION, FACVENTE_DETAIL.PRIX";
@@ -52,7 +52,7 @@ namespace KK_DMS
                     if (DA1.Fill(DS1, "FAC_VENTE_ANA") == 0)
                     {
                         DS1 = null;
-                        MessageBox.Show("Did not find any record in the database!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Did not find any record in the table FAC_VENTE!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
@@ -73,7 +73,7 @@ namespace KK_DMS
                     if (DA2.Fill(DS2, "FAC_ACHAT_ANA") == 0)
                     {
                         DS2 = null;
-                        MessageBox.Show("Did not find any record in the database!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Did not find any record in the table FAC_ACHAT!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {

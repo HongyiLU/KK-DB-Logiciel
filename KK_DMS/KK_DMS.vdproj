@@ -145,6 +145,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_B5EF5EE31C6980F52765BBF2C602B262"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -240,15 +245,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:KK_DMS"
-        "ProductCode" = "8:{AB272D37-E7BC-4086-B22F-151A9B4FDC93}"
-        "PackageCode" = "8:{FAB94A7F-4FDD-4D44-9BBE-13DD90A4DB5B}"
+        "ProductCode" = "8:{2F2CA553-2538-463E-A55F-A5262EEF22F7}"
+        "PackageCode" = "8:{92F428B6-A643-4BCD-A6D3-B9400CF7E171}"
         "UpgradeCode" = "8:{E993BB7C-FEB0-4F17-80D4-8B8CCC904E8E}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.9"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:HONGYI LU"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

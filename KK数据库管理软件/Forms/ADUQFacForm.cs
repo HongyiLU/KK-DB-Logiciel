@@ -42,7 +42,7 @@ namespace KK_DMS.Forms
             cmd.Parameters.Add("QUANTITE", OleDbType.Integer, 10, "QUANTITE");
             cmd.Parameters.Add("ID_FAC", OleDbType.WChar, 0, "ID_FAC");
             cmd.Parameters.Add("DESIGNATION", OleDbType.WChar, 255, "DESIGNATION");
-            cmd.Parameters.Add("QUANTITE", OleDbType.Double, 15, "QUANTITE");
+            cmd.Parameters.Add("PRIX", OleDbType.Double, 15, "PRIX");
             parameter = cmd.Parameters.Add("ID", OleDbType.WChar, 255, "ID");
             Da.UpdateCommand = cmd;
             return Da;
